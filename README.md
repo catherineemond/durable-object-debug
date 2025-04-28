@@ -8,7 +8,7 @@ The issue happens with Cloudflare workers in production environment and can be r
 
 #### Likely explanation
 
-Migration `002` recreates the table every time the migrations are run.  The columns added in the subsequent migrations (`003` and `004`) are not included and the values are lost.
+Migration `002` recreates the table every time the migrations are run.  The columns added in the subsequent migrations (`003` and `004`) are not included and the values are lost. Migrations are run multiple times throughout the lifecycle of a DurableObject.
 
 #### Steps to reproduce
 
